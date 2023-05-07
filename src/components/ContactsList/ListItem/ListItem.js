@@ -2,10 +2,9 @@ import PropTypes from 'prop-types';
 import css from './ListItem.module.css';
 
 
-export const ContactList = ({}) => {
+export const ContactList = ({renderItems, deleteItem}) => {
 
-
-    ({id, name, number }) => {
+    return renderItems.map(({id, name, number }) => {
 
         
         return (
@@ -17,7 +16,7 @@ export const ContactList = ({}) => {
               <button
                 className={css.listItem__button}
                 type="button"
-                onClick={}
+                onClick={() => deleteItem(id)}
                 key={id}
               >
                 Delete
@@ -25,18 +24,12 @@ export const ContactList = ({}) => {
             </div>
           </li>
         )
-      };
+      }
       
 
 
 
-
-
-
-
-
-
-
+    )
 }
 
 
