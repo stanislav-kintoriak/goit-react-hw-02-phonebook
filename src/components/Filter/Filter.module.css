@@ -11,20 +11,18 @@
   font-size: 25px;
 }
 
-
 .filter__label + input {
-    height: 25px;
-    width: 200px;
+  height: 25px;
+  width: 200px;
 
-  
-    border: 3px solid #9b0012;
+  border: 3px solid #9b0012;
 
-    border-radius: 3px;
+  border-radius: 3px;
 
-    font-size: 20px;
-    font-weight: 500;
-    
-    cursor: pointer;
+  font-size: 20px;
+  font-weight: 500;
 
-    color: #bc8f8f;
+  cursor: pointer;
+
+  color: #bc8f8f;
 }

@@ -2,17 +2,17 @@ import PropTypes from 'prop-types';
 import { ListItem } from './ListItem/ListItem';
 import css from './ContactsList.module.css';
 
-export const ContactList = ({ renderItems, deleteItem }) => {
+export const ContactList = ({ renderList, onDeleteContact }) => {
   return (
     <ul className={css.contact__list}>
-      <ListItem contacts={renderItems} deleteContact={deleteItem} />
+      <ListItem giveContacts={renderList} giveDeleteContact={onDeleteContact} />
     </ul>
   );
 };
 
 ContactList.propTypes = {
-  deleteItem: PropTypes.func.isRequired,
-  renderItems: PropTypes.arrayOf(
+  onDeleteContact: PropTypes.func.isRequired,
+  renderList: PropTypes.arrayOf(
     PropTypes.exact({
       id: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
