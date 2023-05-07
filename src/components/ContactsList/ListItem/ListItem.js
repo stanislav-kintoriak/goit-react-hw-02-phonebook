@@ -2,12 +2,9 @@ import PropTypes from 'prop-types';
 import css from './ListItem.module.css';
 
 
-export const ContactList = ({renderItems, deleteItem}) => {
+export const ListItem = ({renderItems, deleteItem}) => {
 
-    return renderItems.map(({id, name, number }) => {
-
-        
-        return (
+    return renderItems.map(({id, name, number }) => (
             <li>
             <div>
               <p>
@@ -24,13 +21,13 @@ export const ContactList = ({renderItems, deleteItem}) => {
             </div>
           </li>
         )
-      }
-      
-
-
-
     )
 }
+
+
+
+
+
 
 
 
