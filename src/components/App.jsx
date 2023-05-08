@@ -72,7 +72,7 @@ render () {
         <Filter filterValue={filter} filterChange={this.filterChangeHandler} />
         <ContactList
           renderList={foundContacts}
-          onDeleteContact={this.onDeleteContact}
+          onDeleteContact={this.deleteContact}
         />
       </div>
   );
