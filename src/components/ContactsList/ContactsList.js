@@ -5,7 +5,10 @@ import css from './ContactsList.module.css';
 export const ContactList = ({ renderList, onDeleteContact }) => {
   return (
     <ul className={css.contact__list}>
-      <ListItem giveContacts={renderList} giveDeleteContact={onDeleteContact} />
+      {renderList.map(renderedItem => ( 
+      <ListItem key={renderedItem.id} giveContact={renderedItem} giveDeleteContact={onDeleteContact} />))
+    }
+     
     </ul>
   );
 };

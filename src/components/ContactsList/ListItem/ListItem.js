@@ -1,8 +1,7 @@
 import PropTypes from 'prop-types';
 import css from './ListItem.module.css';
 
-export const ListItem = ({ giveContacts, giveDeleteContact }) => {
-  return giveContacts.map(({ id, name, number }) => (
+export const ListItem = ({ giveContact:{ id, name, number }, giveDeleteContact }) => (
     <li>
       <div>
         <p>
@@ -18,8 +17,8 @@ export const ListItem = ({ giveContacts, giveDeleteContact }) => {
         </button>
       </div>
     </li>
-  ));
-};
+  );
+;
 
 ListItem.propTypes = {
   giveDeleteContact: PropTypes.func.isRequired,
